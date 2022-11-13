@@ -1,0 +1,80 @@
+// Наші переваги
+// section
+.benefits {
+    padding: 0;
+    padding-top: 94px;
+}
+
+// div
+.benefits-container {
+    display: flex;
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0px auto;
+}
+
+// h2
+.benefits__title {
+    display: flex;
+    margin: 0px;
+    font-size: 0.1px;
+    line-height: 1.16px;
+    color: rgba(0, 0, 0, 0);
+}
+
+
+// ul
+.card-set {
+    display: flex;
+    grid-column-gap: 30px;
+}
+
+// // span
+.card-set__block {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    height: 120px;
+    width: 270px;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #F5F4FA;
+    border-radius: 4px;
+}
+
+
+// svg
+.card-set__img {
+    display: flex;
+    height: 70px;
+    width: 70px;
+
+    justify-content: center;
+    align-items: center;
+
+    fill: $color-title;
+}
+
+
+// benefits - h3
+.card-set__title {
+    display: flex;
+    margin: 0px;
+    margin-top: 30px;
+
+@extend %Main-page__block-title;
+}
+
+
+// benefits - p
+.card-set__line {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 0px;
+
+    @extend %Main-page__text;
+}
+

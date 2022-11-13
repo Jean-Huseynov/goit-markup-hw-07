@@ -1,0 +1,128 @@
+// Наша команда
+
+.team {
+    background: #F5F4FA;
+    padding: 94px 0;
+}
+
+.team-container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0px auto;
+}
+
+
+// team title h3
+.team-container__title {
+    margin: 0;
+    margin-bottom: 50px;
+
+    @extend %Main-page__title;
+
+    color: $color-title;
+}
+
+
+.team__blok {
+    display: flex;
+    grid-column-gap: 30px;
+    margin-top: 50px;
+}
+
+.team__background {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background: $color-accent;
+}
+
+.team__block-text {
+    padding: 30px 0px 30px 0px;
+}
+
+// /* team h3 */
+.team__title {
+    display: flex;
+    margin: 0;
+    justify-content: center;
+
+    @extend %Team__title;
+
+    color: $color-title;;
+}
+
+// /* team p */
+.team__text {
+    display: flex;
+    margin: 10px 0px 16px 0px;
+    justify-content: center;
+
+    @extend %Team__text;
+    
+    color: $color-text;
+}
+
+
+
+
+// ul
+.icon-smm{
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 10px;
+}
+
+
+
+// icon-smm__block li
+.icon-smm__block{
+    border-radius: 50%;
+
+    transition-property: background, border-radius;
+@extend %animation;
+
+&:hover,
+&:focus {
+        background: $color-hover-focus;
+    }
+}
+
+
+
+// /* a */
+.icon-smm__linck {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+
+    border-radius: 50%;
+
+    transition-property: background, border-radius;
+    @extend %animation;
+
+
+&:hover,
+&:focus {
+background: $color-hover-focus;
+}
+}
+
+
+
+
+// /* svg */
+.icon-smm__icon {
+    display: flex;
+    fill: #AFB1B8;
+
+    transition-property: fill;
+    @extend %animation;
+
+    .icon-smm__linck:hover &,
+        .icon-smm__linck:focus & {
+            fill: $color-accent;
+        }
+}
+

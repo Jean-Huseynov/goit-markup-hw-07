@@ -1,0 +1,63 @@
+@import "./utils/variables";
+@import "./component/logo";
+@import "./component/page-header";
+@import "./component/hero";
+@import "./component/benefits";
+@import "./component/services";
+@import "./component/team";
+@import "./component/customers";
+@import "./component/footer";
+@import "./component/modal";
+@import "./component/portfolio";
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    color: $color-title;
+    background: $color-accent;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+// blackout body
+.blackout {
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

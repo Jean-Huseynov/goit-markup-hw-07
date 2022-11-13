@@ -1,0 +1,73 @@
+/* HERO */
+.hero-container {
+
+    background-position: 50% 50%;
+    max-width: 1600px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    text-align: center;
+    background-size: cover;
+    background-color: #C4C4C4;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/foto_hero.jpg);
+    margin: 0 auto;
+}
+
+
+.hero {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+
+
+/* hero - h1 */
+.hero-container__title {
+    padding: 0px;
+    margin: 0;
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @extend %hero-container__title;
+
+    text-transform: uppercase;
+
+    color: $color-accent;
+
+}
+
+
+/* button */
+.button {
+    margin-top: 30px;
+    padding: 10px 32px;
+    // width: 216px;
+    
+    @extend %button;
+
+    color: $color-accent;
+
+    background: $color-hover-focus;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0px;
+
+
+    transition-property: color, background, cursor;
+    @extend %animation;
+
+
+&:hover,
+&:focus {
+            color: $color-accent;
+            background: $color-hover-focus;
+            cursor: pointer;
+        }
+}
+

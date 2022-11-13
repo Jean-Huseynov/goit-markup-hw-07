@@ -1,0 +1,209 @@
+// HEADER
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container container {
+    display: flex;
+}
+
+
+
+
+// SITE-NAV
+.nav-container {
+    display: flex;
+}
+
+.site-nav {
+    display: flex;
+}
+
+// Site-nav
+.site-nav__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+@extend %nav__text;
+
+color: $color-title;
+
+    transition-property: color, cursor;
+    @extend %animation;
+
+&:hover,
+&:focus{
+color: $color-hover-focus;
+cursor: pointer;
+}
+}
+
+
+// site-nav__fover
+.site-nav__fover {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    margin-left: 50px;
+
+    transition-property: background;
+    @extend %animation;
+
+    &:first-child {
+            margin-left: 93px;
+        }
+}
+
+// fover
+.site-nav__fover .site-nav__link::before {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 76px;
+
+    background: rgba(33, 150, 243, 0);
+    border-radius: 2px;
+
+    transition-property: background;
+    @extend %animation;
+
+    &:hover,
+        &:focus {
+            color: $color-hover-focus;
+            cursor: pointer;
+        }
+}
+
+.site-nav__fover .site-nav__link:hover::after {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    top: 76px;
+
+    background: $color-hover-focus;
+    border-radius: 2px;
+}
+
+
+
+
+
+
+// AUTH-NAV
+.auth-nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+// tel
+.auth-nav__link {
+    display: flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    align-items: center;
+    @extend %nav__text;
+
+    color: $color-text;
+
+    transition-property: color, cursor;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        color: $color-hover-focus;
+        cursor: pointer;
+    }
+}
+
+
+
+
+// mailto
+.auth-nav__mailto {
+    display: flex;
+}
+
+
+.auth-nav__icon-mailto {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+    padding: 0px 0px 0px 0px;
+
+    fill: #AFB1B8;
+
+    transition-property: fill, cursor;
+    @extend %animation;
+
+&:hover,
+    &:focus {
+        fill: $color-hover-focus;
+        cursor: pointer; }
+}
+
+.auth-nav__link:hover .auth-nav__icon-mailto,
+.auth-nav__link:focus .auth-nav__icon-mailto {
+    fill: $color-hover-focus; 
+    cursor: pointer;
+}
+
+.auth-nav__block {
+    display: flex;
+    margin: 0px;
+
+    transition-property: fill, cursor;
+    @extend %animation;
+}
+
+
+/* tel */
+.auth-nav__tel {
+    display: flex;
+}
+
+.auth-nav__icon-tel {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+    padding: 0;
+
+    fill: #AFB1B8;
+
+    transition-property: fill, cursor;
+    @extend %animation;
+
+    &:hover,
+    &:focus {
+        fill: $color-hover-focus;
+        cursor: pointer;
+    }
+}
+    .auth-nav__link:hover .auth-nav__icon-tel,
+    .auth-nav__link:focus .auth-nav__icon-tel {
+        fill: $color-hover-focus; 
+        cursor: pointer;
+    }
+
+    .auth-nav__block {
+        display: flex;
+        margin: 0px;
+
+        transition-property: fill, cursor;
+        @extend %animation;
+    }

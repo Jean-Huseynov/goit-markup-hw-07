@@ -1,0 +1,60 @@
+// Чим ми займаємося h3
+
+.services {
+    padding: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+.services-container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0px auto;
+}
+
+.services__invisible-title {
+    padding: 0;
+    margin: 0px 0px 50px 0px;
+
+@extend %Main-page__title;
+
+color: $color-title;
+}
+
+
+.services__blok {
+    display: flex;
+    grid-column-gap: 30px;
+    margin: 0px;
+}
+
+
+// /* Нижний шрифт */
+// /* title-img li */
+.services__item {
+    position: relative;
+}
+
+.services__block-title {
+    position: absolute;
+
+    width: 370px;
+    height: 70px;
+    left: 0px;
+    top: 224px;
+
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.services__title {
+margin: 0;
+padding: 24px 0px 0px 0px;
+
+text-align: center;
+
+@extend %Main-page__block-title;
+
+color: $color-accent;
+}
+

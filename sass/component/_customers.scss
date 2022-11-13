@@ -1,0 +1,101 @@
+// Постійні клієнти Regular customers
+.customers {
+    padding: 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+// .regular-customers {
+//     padding: 94px 0px;
+//     margin: 0px;
+// }
+
+// .regular-customers-container {
+//     width: 1200px;
+//     padding: 0 15px;
+//     margin: 0px;
+// }
+
+
+// .regular-customers-container .customers-title {
+//     display: flex;
+//     font-style: normal;
+//     text-align: center;
+//     justify-content: center;
+//     margin: 0;
+//     margin-bottom: 50px;
+//     text-decoration: none;
+//     font-family: inherit;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 1.16;
+//     letter-spacing: 0.03em;
+//     color: #212121;
+// }
+
+.customers__title {
+    margin: 0;
+    margin-bottom: 50px;
+    
+    @extend %Main-page__title;
+}
+
+// /* логотип постійні клієнти */
+
+// /* ul */
+.customers__icon-block {
+    display: flex;
+    justify-content: center;
+    grid-column-gap: 30px;
+}
+
+
+// /* li */
+.services__link {
+    display: flex;
+
+    height: 92px;
+    width: 170px;
+    margin: 0px;
+    border-radius: 4px;
+    justify-content: center;
+
+    border: 1px solid #AFB1B8;
+
+    transition-property: border;
+    @extend %animation;
+
+
+    &:hover,
+        &:focus {
+            border: 1px solid #2196F3;
+        }
+}
+
+
+
+
+// /* a */
+.services__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+// /* svg */
+.customers__icon {
+    display: flex;
+    fill: #AFB1B8;
+
+    transition-property: fill;
+    @extend %animation;
+
+    .services__link:hover &,
+        .services__link:focus & {
+            fill: #2196F3;
+        }
+}

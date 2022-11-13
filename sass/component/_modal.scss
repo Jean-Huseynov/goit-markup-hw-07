@@ -1,0 +1,320 @@
+// /* MODAL */
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    z-index: 1;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: scale(1) translate(-50%, -50%);
+}
+
+.button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 50%;
+
+    transition-property: transition-duration, cursor;
+    @extend %animation;
+
+    &:hover {
+            transition-duration: 250ms;
+            cursor: pointer;
+        }
+}
+
+
+
+.bcard-set-img {
+    padding: 0;
+    margin: 0;
+    fill: #212121;
+
+    transition-property: fill;
+    @extend %animation;
+
+    .button-close:hover & {
+            fill: $color-hover-focus;
+        }
+}
+
+
+
+
+
+
+.modal__contact {
+    padding: 40px;
+}
+
+// /* Залиште свої дані, ми вам передзвонимо */
+// /* modal-text h3  */
+.modal__text {
+    margin: 0;
+    padding: 0;
+
+    @extend %modal__title;
+
+    color: $color-title;
+}
+
+
+// /* Ім'я modal */
+.contact__form {
+    display: block;
+    justify-content: center;
+}
+
+
+// /* form-label */
+.form__label {
+    display: block;
+    
+
+    padding: 0;
+    margin: 10px 0px 4px 0px;
+
+    @extend %modal__text;
+
+    color: $color-text;
+
+    &:first-child {
+            margin: 12px 0px 4px 0px;
+        }
+}
+
+
+
+// /* div */
+.form__control {
+    display: block;
+    position: relative;
+    margin: 0;
+
+}
+
+// /* input */
+.form__input {
+    display: block;
+    padding: 12px 12px 12px 32px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    transition-property: border;
+    @extend %animation;
+
+    &:hover,
+        &:focus {
+            border: 1px solid #2196F3;
+        }
+}
+
+
+
+
+
+
+// /* svg */
+.form__icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    fill: #212121;
+
+    transition-property: fill;
+    @extend %animation;
+
+    .form-input:hover + &,
+        .form-input:focus + & {
+            fill: $color-hover-focus;
+        }
+}
+
+
+
+
+
+
+
+.form__textarea {
+    display: block;
+    Width: 448px;
+    height: 120px;
+
+    margin: 0;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    transition-property: border;
+    @extend %animation;
+
+    &:focus,
+        &:hover {
+            border: 1px solid #2196F3;
+        }
+
+
+&::placeholder {
+@extend %modal__text;
+
+color: rgba(117, 117, 117, 0.5);
+}
+}
+
+
+
+
+// .textarea {
+//     font-family: inherit;
+//     font-size: 100%;
+//     line-height: 1.15;
+//     margin: 0;
+// }
+
+
+
+// /* checkbox */
+.checkbox__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+.checkbox__label {
+    padding-left: 37px;
+}
+
+
+.checkbox-label.text {
+    @extend %Main-page__text;
+
+    color: $color-text;
+}
+
+
+.visually__hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+
+.checkbox__input:checked+.checkbox__svg {
+    fill: $color-accent;
+    background-color: $color-hover-focus;
+    border: none;
+}
+
+
+.checkbox__svg {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    fill: #FFFFFF;
+    border: 2px solid #212121;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+}
+
+
+.checkbox__link {
+    position: relative;
+
+    @extend %Main-page__text;
+
+    color: rgba(33, 150, 243, 1);
+    border-bottom: 1px solid rgba(33, 150, 243, 1);
+}
+
+
+
+
+// /* button */
+.modal-button {
+    display: flex;
+    justify-content: center;
+}
+
+.form-button {
+    margin: 0;
+    margin-top: 30px;
+    padding: 10px 52px;
+
+    @extend %button;
+
+    color: $color-accent;
+
+    background: $color-hover-focus;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 0px;
+
+
+    transition-property: color, background, cursor;
+    @extend %animation;
+
+    &:hover,
+        &:focus {
+            color: $color-accent;
+            background: #0b85e8;
+            cursor: pointer;
+        }
+}
+

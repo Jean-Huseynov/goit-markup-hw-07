@@ -1,0 +1,272 @@
+// Палітра кольорів макета і набори шрифтів
+
+:root {
+    // var(--primary-text-color) Line
+    --primary-text-color: #757575;  
+    
+
+// var(--title-text-color) Title
+    --title-text-color: #212121;
+
+
+// var(--accent-color) Accent
+    --accent-color: #FFFFFF;
+
+
+// var(--link-focus)
+    --link-focus: #2196F3;
+
+}
+
+
+
+$color-logo-web: #2196F3;
+$color-logo__header-studio: #212121;
+$color-logo__footer-studio: #FFFFFF;
+
+
+$color-title: #212121;
+$color-text: #757575;
+$color-accent: #FFFFFF;
+$color-hover-focus: #2196F3;
+$color-address-text: rgba(255, 255, 255, 0.6);
+
+
+
+// font-family: inherit;
+
+
+// logo
+// @extend %logo__title;
+%logo__title { 
+text-decoration: none;
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 1.19;
+letter-spacing: 0.03em;
+}
+
+// site-nav, Auth-nav.
+// @extend %nav__text;
+%nav__text {
+text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.02em;
+}
+
+
+// hero-container title
+// @extend %hero-container__title;
+%hero-container__title {
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+/* or 136% */
+text-align: center;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+} 
+
+
+// hero-container button, footer button, modal button
+// @extend %button;
+%button {
+text-decoration: none;
+// font-family: inherit;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.88;
+/* identical to box height, or 188% */
+letter-spacing: 0.06em;
+}
+
+
+// benefits title, services-blok title, Footer title.
+// @extend %Main-page__block-title;
+%Main-page__block-title {
+text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+
+
+// benefits text, Footer text, modal checkbox text.
+// @extend %Main-page__text;
+%Main-page__text {
+text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+/* or 171% */
+letter-spacing: 0.03em;
+}
+
+
+// Чим ми займаємося, Наша команда, Постійні кліенти.
+// @extend %Main-page__title;
+%Main-page__title {
+text-align: center;
+text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+
+// Team title
+// @extend %Team__title;
+%Team__title {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.18;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+// Team text
+// @extend %Team__text;
+%Team__text {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.18;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+
+// footer text
+// @extend %footer__text;
+%footer__text {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
+}
+
+
+// modal title
+// @extend %modal__title;
+%modal__title {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+// modal text
+// @extend %modal__text;
+%modal__text {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.16;
+/* identical to box height */
+letter-spacing: 0.01em;
+}
+
+
+// button-portfolio
+// @extend %button-portfolio;
+%button-portfolio {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.62;
+/* identical to box height, or 162% */
+text-align: center;
+letter-spacing: 0.03em;
+}
+
+
+// portfolio background-text animatoin,
+// @extend %portfolio__text-animatoin;
+%portfolio__text-animatoin {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.56;
+/* or 156% */
+letter-spacing: 0.03em;
+}
+
+
+
+// portfolio img-blok title
+// @extend %portfolio__img-blok-title;
+%portfolio__img-blok-title {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 2;
+/* identical to box height, or 200% */
+letter-spacing: 0.06em;
+}
+
+
+// portfolio img-blok text
+// @extend %portfolio__img-blok-text;
+%portfolio__img-blok-text {
+    text-decoration: none;
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.88;
+/* identical to box height, or 188% */
+letter-spacing: 0.03em;
+}
+
+
+// @extend %animation;
+%animation {
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
