@@ -27,6 +27,24 @@
     display: flex;
 }
 
+
+// site-nav__fover
+.site-nav__fover {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    margin-left: 50px;
+
+    // transition-property: background;
+    // @extend %animation;
+
+    &:first-child {
+        margin-left: 93px;
+    }
+}
+
+
 // Site-nav
 .site-nav__link {
     display: flex;
@@ -47,26 +65,19 @@ cursor: pointer;
 }
 }
 
-
-// site-nav__fover
-.site-nav__fover {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-
-    margin-left: 50px;
-
-    transition-property: background;
-    @extend %animation;
-
-    &:first-child {
-            margin-left: 93px;
-        }
+.site-nav__fover:hover .site-nav__link,
+.site-nav__fover:focus .site-nav__link {
+    color: $color-hover-focus;
+        cursor: pointer;
 }
 
+
+
+
 // fover
-.site-nav__fover .site-nav__link::before {
+.site-nav__link::before {
     position: absolute;
+    
     margin: 0;
     padding: 0;
     content: "";
@@ -77,30 +88,31 @@ cursor: pointer;
     background: rgba(33, 150, 243, 0);
     border-radius: 2px;
 
-    transition-property: background;
-    @extend %animation;
-
-    &:hover,
-        &:focus {
-            color: $color-hover-focus;
-            cursor: pointer;
-        }
+    
 }
 
-.site-nav__fover .site-nav__link:hover::after {
+.site-nav__link::after {
     position: absolute;
-    margin: 0;
-    padding: 0;
-    content: "";
-    width: 100%;
-    height: 4px;
-    top: 76px;
+    
+        margin: 0;
+        padding: 0;
+        content: "";
+        width: 100%;
+        height: 4px;
+        top: 76px;
+    
+        border-radius: 2px;
 
-    background: $color-hover-focus;
-    border-radius: 2px;
+        transition-property: background, cursor;
+        @extend %animation;
+
 }
 
-
+.site-nav__link:hover::after,
+.site-nav__link:focus::after {
+    background: $color-hover-focus;
+        cursor: pointer;
+}
 
 
 

@@ -53,12 +53,12 @@
     transition-property: transition-duration, cursor;
     @extend %animation;
 
-    &:hover {
+    &:hover,
+    &:focus {
             transition-duration: 250ms;
             cursor: pointer;
         }
 }
-
 
 
 .bcard-set-img {
@@ -69,7 +69,8 @@
     transition-property: fill;
     @extend %animation;
 
-    .button-close:hover & {
+    .button-close:hover &,
+    .button-close:focus & {
             fill: $color-hover-focus;
         }
 }
@@ -160,21 +161,16 @@
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
-    fill: #212121;
+    fill: $color-title;
 
-    transition-property: fill;
-    @extend %animation;
-
-    .form-input:hover + &,
-        .form-input:focus + & {
-            fill: $color-hover-focus;
-        }
+transition-property: fill;
+@extend %animation;
 }
 
-
-
-
-
+.form__input:hover+ .form__icon,
+.form__input:focus+ .form__icon {
+    fill: #2196F3;
+}
 
 
 .form__textarea {
@@ -194,7 +190,7 @@
 
     &:focus,
         &:hover {
-            border: 1px solid #2196F3;
+            border: 1px solid $color-hover-focus;
         }
 
 
